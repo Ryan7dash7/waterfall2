@@ -2,7 +2,7 @@ function h = waterfall2(varargin)
 %WATERFALL2 2-D waterfall plot.
 %   WATERFALL2(...) is the same as WATERFALL(...) except that the row lines
 %   of the mesh are drawn in the same plane. The y-axis tick values for
-%   each row line are determined by y. For column-oriented data analysis,
+%   each row line are determined by Y. For column-oriented data analysis,
 %   use WATERFALL2(Z') or WATERFALL2(X',Y',Z').
 %
 %   See also WATERFALL.
