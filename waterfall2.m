@@ -7,7 +7,7 @@ function h = waterfall2(varargin)
 %
 %   See also WATERFALL.
 
-%   Version 2017.03.07
+%   Version 2017.04.28
 %   Copyright 2017 Ryan McGowan
 
 if nargin < 1
@@ -40,7 +40,7 @@ end
 [m,n] = size(z);
 z_centered = zeros(m,n);
 for i = 1:m
-    z_centered(i,:) = z(i,:)-(max(z(i,:))-min(z(i,:)))/2;
+    z_centered(i,:) = z(i,:)-mean(z(i,:));
 end
 
 % Offset traces from zero based on y
@@ -54,6 +54,5 @@ yticks(y(:,1))
 if nargout > 0
     h = hp;
 end
-
 end
 
