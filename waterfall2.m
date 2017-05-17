@@ -7,7 +7,7 @@ function h = waterfall2(varargin)
 %
 %   See also WATERFALL.
 
-%   Version 2017.05.08
+%   Version 2017.05.17
 %   Copyright 2017 Ryan McGowan
 
 if nargin < 1
@@ -37,7 +37,7 @@ if min(size(x)) == 1 || min(size(y)) == 1
 end
 
 % Center traces around zero
-z_centered = z-mean(z,2);
+z_centered = z-nanmean(z,2);
 
 % Offset traces from zero based on y
 z_offset = z_centered+y;
